@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(138, 190, 173);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: justify;
+            text-shadow: black 5px 5px 5px;
+            color: antiquewhite;
+            margin-left: 200px;">
+    <script>
+        function start()
+        {
+            var diasbased = parseInt (prompt("Que dia é hoje? XX/XX/XXXX"))
+            var mesesbased = parseInt (prompt("Que mês é hoje? " + diasbased + "/XX/XXXX"))
+            var anosbase = parseInt (prompt("Que mês é hoje? " + diasbased + "/" + mesesbased +"/XXXX"))
+            var dias = parseInt (prompt("Que dia Você Nasceu? XX/XX/XXXX"))
+            var meses = parseInt (prompt("Que mês Você Nasceu? " + dias + "/XX/XXXX"))
+            var anos = parseInt (prompt("Que ano Você Nasceu? " + dias + "/" + meses +"/XXXX"))
+
+            var resposta = (prompt("Você Fez seu Aniversário? S/N"))
+            
+            if (resposta=="N")
+        {
+            var calculodias = 31-dias
+            var calculomeses = 12-1-meses*30
+            var calculomesesbased = mesesbased-1*30
+            var idade = (anosbase-anos)-1
+            var calculoanos = (idade+1)*365
+            var calculoanossobra = idade*5
+            var total = calculodias+calculomeses+calculomesesbased+calculoanos+calculoanossobra+diasbased
+            document.write ("-----------------" +"<br>")
+            document.write ("|CÁLCULO DE DIAS|" +"<br>")
+            document.write ("-----------------" +"<br>")
+            document.write ("De Acordo Com a Data " + (dias + "/" + meses + "/" +anos + "<br>"))
+            document.write ("Você Viveu Aproximadamente " +total + " Dias Sem Contar Com os Anos Bissextos " + "<br>")
+            document.write ("Você Tem " +idade +" Anos <br>")
+        }
+           else if ( resposta=="S")
+        {
+            var calculodias = 31-dias
+            var calculomeses = 12-1-meses*30
+            var calculomesesbased = mesesbased-1*30
+            var idade = anosbase-anos
+            var calculoanos = idade*365
+            var calculoanossobra = idade*5
+            var total = calculodias+calculomeses+calculomesesbased+calculoanos+calculoanossobra+diasbased
+            
+            document.write ("--------------------" +"<br>")
+            document.write ("|CÁLCULO DE DIAS|" +"<br>")
+            document.write ("--------------------" +"<br>")
+            document.write ("De Acordo Com a Data " + (dias + "/" + meses + "/" +anos + "<br>"))
+            document.write ("Você Viveu Aproximadamente " +total + " dias " + "<br>")
+            document.write ("Você Tem " +idade +" Anos <br>")
+        }
+        }
+        start();
+    </script>
+</body>
+</html>
+
+
